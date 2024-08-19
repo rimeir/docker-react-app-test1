@@ -1,0 +1,10 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - echo "start creating an image with dockerfile"
+  - docker build -t ella00/docker-react-app -f Dockerfile.dev .
